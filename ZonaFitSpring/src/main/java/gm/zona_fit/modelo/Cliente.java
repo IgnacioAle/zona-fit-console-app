@@ -1,0 +1,31 @@
+package gm.zona_fit.modelo;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
+
+public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String nombre;
+    private String apellido;
+    private String rut;
+    private String fechaNacimiento;
+    private String email;
+    private String telefono;
+    private String direccion;
+    private String fechaRegistro;
+    private int membresia;
+
+}
